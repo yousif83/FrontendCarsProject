@@ -1,15 +1,20 @@
 
 getCarTable()
 
-var inputTag=document.getElementById('carID')
-inputTag.addEventListener("input", function(event){
-     event.preventDefault()
-       carId=inputTag.value
-    $.get(`https://obscure-wildwood-54124.herokuapp.com/cars/${carId}`)
-    .done(function(data){
-       loadGridView(data)
-    })
-});
+getCarById ()
+
+
+function getCarById (){
+  var inputTag=document.getElementById('carID')
+  inputTag.addEventListener("input", function(event){
+       event.preventDefault()
+         carId=inputTag.value
+      $.get(`https://obscure-wildwood-54124.herokuapp.com/cars/${carId}`)
+      .done(function(data){
+         loadGridView(data)
+      })
+  });
+}
 
 function getCarTable(){
    $.get("https://obscure-wildwood-54124.herokuapp.com/cars")

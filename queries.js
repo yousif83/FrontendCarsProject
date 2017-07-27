@@ -7,7 +7,7 @@ var queries={
     success: function(result) {
         $('p').text(result)
         $('p').fadeIn('slow').delay(1000).fadeOut('slow');
-
+          getCarTable()
     }
   })
 
@@ -22,7 +22,7 @@ var queries={
               price : items.price
 
    }
-$.post("https://obscure-wildwood-54124.herokuapp.com/cars/" , carInputs)
+$.post("https://obscure-wildwood-54124.herokuapp.com/cars" , carInputs)
 .done(function(data){
   $('p').text(data)
   $('p').fadeIn('slow').delay(1000).fadeOut('slow');
@@ -33,14 +33,14 @@ $.post("https://obscure-wildwood-54124.herokuapp.com/cars/" , carInputs)
   carUpdate : function(body,id){
     $.ajax({
         type: 'PUT',
-        url: `https://obscure-wildwood-54124.herokuapp.com/cars/${id}`,
+        url: `http://localhost:3000/cars/${id}`,
         data: body,
 
 
         success: function (result) {
           $('p').text(result)
           $('p').fadeIn('slow').delay(1000).fadeOut('slow');
-
+         getCarTable()
         }
 
     })
