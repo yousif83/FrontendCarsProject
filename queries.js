@@ -43,9 +43,7 @@ $.post("https://obscure-wildwood-54124.herokuapp.com/cars/" , carInputs)
 
         }
 
-    }).ajaxError(function(){
-    alert("An error occurred!");
-});
+    })
   }
 
 }
