@@ -1,0 +1,32 @@
+body{
+background: linear-gradient(to right,#283048, #859398);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+main {
+  margin-top: 10vh;
+}
+
+p {
+  display: none;
+  color:red;
+  font-size: 2em;
+
+
+}
+.msg {
+  height: 7vh;
+}
+
+.formLabels {
+  color: #c7cddb;
+}
+
+section {
+    margin-bottom: 2vh;
+}
