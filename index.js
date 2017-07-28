@@ -24,6 +24,7 @@ function getCarTable(){
 }
 
 function loadGridView(carData){
+
   $("#jsGrid").jsGrid({
       width: "100%",
       inserting: true,
@@ -34,6 +35,7 @@ function loadGridView(carData){
 
     },
     onItemUpdating: function(args) {
+        console.log(args.grid)
        queries.carUpdate(args.item,args.item.id)
 
 
@@ -45,7 +47,7 @@ function loadGridView(carData){
       paging: true,
       data: carData,
       fields: [
-          { name: "id", type: "text" },
+          { name: "id", type: "text" ,readOnly:true },
           { name: "color", type: "text" },
           { name: "condition", type: "text" },
           { name: "make_year", type: "text"},
@@ -55,4 +57,5 @@ function loadGridView(carData){
             { type: "control"}
       ]
   });
+
 }
