@@ -33,7 +33,7 @@ $.post("https://obscure-wildwood-54124.herokuapp.com/cars" , carInputs)
   carUpdate : function(body,id){
     $.ajax({
         type: 'PUT',
-        url: `http://localhost:3000/cars/${id}`,
+        url: `https://obscure-wildwood-54124.herokuapp.com/cars/${id}`,
         data: body,
 
 

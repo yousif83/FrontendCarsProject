@@ -33,12 +33,12 @@ function loadGridView(carData){
     queries.carDelete(args.item.id)
 
     },
-    onItemUpdated: function(args) {
+    onItemUpdating: function(args) {
        queries.carUpdate(args.item,args.item.id)
 
 
     },
-    onItemInserted: function(args) {
+    onItemInserting: function(args) {
      queries.carAdd(args.item)
 
      },
