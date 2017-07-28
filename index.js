@@ -27,7 +27,7 @@ function loadGridView(carData){
 
   $("#jsGrid").jsGrid({
       width: "100%",
-      inserting: true,
+    inserting: true,
     editing: true,
     sorting: true,
     onItemDeleted: function(args) {
@@ -35,10 +35,7 @@ function loadGridView(carData){
 
     },
     onItemUpdating: function(args) {
-        console.log(args.grid)
        queries.carUpdate(args.item,args.item.id)
-
-
     },
     onItemInserting: function(args) {
      queries.carAdd(args.item)
@@ -46,8 +43,9 @@ function loadGridView(carData){
      },
       paging: true,
       data: carData,
+      pageSize :10,
       fields: [
-          { name: "id", type: "text" ,readOnly:true },
+          { name: "id", type: "number" ,readOnly:true },
           { name: "color", type: "text" },
           { name: "condition", type: "text" },
           { name: "make_year", type: "text"},
@@ -57,5 +55,5 @@ function loadGridView(carData){
             { type: "control"}
       ]
   });
-
+  $("#jsGrid").jsGrid("sort", "id");
 }
